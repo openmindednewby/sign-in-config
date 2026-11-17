@@ -43,3 +43,31 @@ describe('signInConfigSchema', () => {
     expect(listed.sort()).toEqual(onDisk.sort());
   });
 });
+
+describe('signInConfigSchema motion names', () => {
+  const motion = (signInConfigSchema as { $defs: { motion: { properties: Record<string, { properties: Record<string, { enum: string[] }> }> } } }).$defs.motion.properties;
+
+  it('with the intro preset enum, lists exactly the logo-kit raster intro names', () => {
+    const rasterIntros = ['fade-up', 'scale-settle', 'mask-wipe', 'light-sweep', 'focus-in', 'glow-sweep', 'punch-sweep', 'double-sweep', 'burst-settle', 'tilt-sweep'];
+
+    const names = motion.intro.properties.preset.enum;
+
+    expect(names).toEqual(rasterIntros);
+  });
+
+  it('with the micro preset enum, lists exactly the logo-kit raster micro names', () => {
+    const rasterMicros = ['pulse', 'glint', 'nudge', 'underline-draw'];
+
+    const names = motion.micro.properties.preset.enum;
+
+    expect(names).toEqual(rasterMicros);
+  });
+
+  it('with the idle recipe enum, lists exactly the logo-kit raster idle names', () => {
+    const rasterIdles = ['slow-glint', 'glow-breathe', 'sheen-drift', 'soft-lift', 'twin-shimmer'];
+
+    const names = motion.idle.properties.recipe.enum;
+
+    expect(names).toEqual(rasterIdles);
+  });
+});

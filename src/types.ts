@@ -1,3 +1,6 @@
+import type { IdleRecipe } from './IdleRecipe';
+import type { IntroPreset } from './IntroPreset';
+import type { MicroPreset } from './MicroPreset';
 import type { UsernameKind } from './UsernameKind';
 
 export interface SignInColors {
@@ -114,20 +117,20 @@ export interface SignInValidation {
   password?: FieldRule;
 }
 
-export interface MotionBeatConfig {
-  preset: string;
+export interface MotionBeatConfig<TPreset extends string = IntroPreset | MicroPreset> {
+  preset: TPreset;
   durationMs?: number;
 }
 
 export interface IdleMotionConfig {
-  recipe: string;
+  recipe: IdleRecipe;
   durationMs?: number;
 }
 
 export interface SignInMotionConfig {
   enabled: boolean;
-  intro?: MotionBeatConfig;
-  micro?: MotionBeatConfig;
+  intro?: MotionBeatConfig<IntroPreset>;
+  micro?: MotionBeatConfig<MicroPreset>;
   idle?: IdleMotionConfig;
 }
 

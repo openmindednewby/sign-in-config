@@ -3,5 +3,8 @@ export { checkColors, MIN_TEXT_CONTRAST, TEXT_CONTRAST_PAIRS } from './contrast'
 export { parseSignInConfig, assertSignInConfig, signInConfigSchema } from './parse';
 export { validateAgainstSchema, SUPPORTED_KEYWORDS } from './schemaValidator';
 export { toSignInTheme, toAuthTheme } from './themeMaps';
+export { IdleRecipe } from './IdleRecipe';
+export { IntroPreset } from './IntroPreset';
+export { MicroPreset } from './MicroPreset';
 export { UsernameKind } from './UsernameKind';
 export type * from './types';

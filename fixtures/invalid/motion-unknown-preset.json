@@ -82,11 +82,11 @@
       "durationMs": 600
     },
     "micro": {
-      "preset": "sweep",
+      "preset": "glint",
       "durationMs": 300
     },
     "idle": {
-      "recipe": "breath"
+      "recipe": "glow-breathe"
     }
   },
   "copy": {

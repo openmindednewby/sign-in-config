@@ -109,6 +109,24 @@
       ]
     },
     {
+      "file": "invalid/motion-unknown-micro-preset.json",
+      "errors": [
+        {
+          "path": "/motion/micro/preset",
+          "keyword": "enum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/motion-unknown-idle-recipe.json",
+      "errors": [
+        {
+          "path": "/motion/idle/recipe",
+          "keyword": "enum"
+        }
+      ]
+    },
+    {
       "file": "invalid/remember-me-over-session-cap.json",
       "options": {
         "sessionMaxHours": 10

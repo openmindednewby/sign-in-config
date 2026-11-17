@@ -78,15 +78,15 @@
   "motion": {
     "enabled": true,
     "intro": {
-      "preset": "stagger-rise",
+      "preset": "fade-up",
       "durationMs": 1500
     },
     "micro": {
-      "preset": "sweep",
+      "preset": "glint",
       "durationMs": 300
     },
     "idle": {
-      "recipe": "breath"
+      "recipe": "glow-breathe"
     }
   },
   "copy": {

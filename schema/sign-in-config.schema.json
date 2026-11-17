@@ -606,20 +606,16 @@
           "properties": {
             "preset": {
               "enum": [
-                "draw",
-                "flood",
-                "stagger-rise",
-                "scale-pop",
-                "orbit",
-                "wipe",
-                "morph-from-circle",
-                "sweep",
-                "pulse",
-                "fly-in",
-                "spin-assemble",
-                "drop-bounce",
-                "flip",
-                "slam-shake"
+                "fade-up",
+                "scale-settle",
+                "mask-wipe",
+                "light-sweep",
+                "focus-in",
+                "glow-sweep",
+                "punch-sweep",
+                "double-sweep",
+                "burst-settle",
+                "tilt-sweep"
               ]
             },
             "durationMs": {
@@ -638,9 +634,10 @@
           "properties": {
             "preset": {
               "enum": [
-                "spread",
                 "pulse",
-                "sweep"
+                "glint",
+                "nudge",
+                "underline-draw"
               ]
             },
             "durationMs": {
@@ -659,10 +656,11 @@
           "properties": {
             "recipe": {
               "enum": [
-                "rim-glint",
-                "faces-part",
-                "breath",
-                "orbit-spark"
+                "slow-glint",
+                "glow-breathe",
+                "sheen-drift",
+                "soft-lift",
+                "twin-shimmer"
               ]
             },
             "durationMs": {
