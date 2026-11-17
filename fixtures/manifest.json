@@ -11,6 +11,9 @@
       "options": {
         "sessionMaxHours": 10
       }
+    },
+    {
+      "file": "valid/motion-idle-loop.json"
     }
   ],
   "invalid": [
@@ -123,6 +126,24 @@
         {
           "path": "/motion/idle/recipe",
           "keyword": "enum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/motion-idle-under-loop.json",
+      "errors": [
+        {
+          "path": "/motion/idle/durationMs",
+          "keyword": "minimum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/motion-idle-over-loop.json",
+      "errors": [
+        {
+          "path": "/motion/idle/durationMs",
+          "keyword": "maximum"
         }
       ]
     },

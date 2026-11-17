@@ -27,7 +27,7 @@ const formTheme = toAuthTheme(config.theme, defaultFormTheme);
 | `features` | `rememberMe { enabled, maxHours }`, `forgotPassword { enabled, tokenMinutes }`, `signUp { enabled, href }`, `demoAccounts { enabled }`. |
 | `validation` | `username { kind: email or text, required, minLength, maxLength, pattern, patternMessage }`, `password` (same, no `kind`). |
 | `theme` | `colors` (20 tokens), `fontFamily`, optional `radii`, `spacing`, `typography`. |
-| `motion` | `enabled`, `intro { preset, durationMs <= 1200 }`, `micro { preset, durationMs <= 300 }`, `idle { recipe, durationMs <= 600 }`. Names are exactly the @dloizides/logo-kit raster presets: intro `fade-up`, `scale-settle`, `mask-wipe`, `light-sweep`, `focus-in`, `glow-sweep`, `punch-sweep`, `double-sweep`, `burst-settle`, `tilt-sweep`; micro `pulse`, `glint`, `nudge`, `underline-draw`; idle `slow-glint`, `glow-breathe`, `sheen-drift`, `soft-lift`, `twin-shimmer`. Renderers stay still under reduced motion. |
+| `motion` | `enabled`, `intro { preset, durationMs <= 1200 }`, `micro { preset, durationMs <= 300 }`, `idle { recipe, durationMs 6000-8000 }`. Names are exactly the @dloizides/logo-kit raster presets: intro `fade-up`, `scale-settle`, `mask-wipe`, `light-sweep`, `focus-in`, `glow-sweep`, `punch-sweep`, `double-sweep`, `burst-settle`, `tilt-sweep`; micro `pulse`, `glint`, `nudge`, `underline-draw`; idle `slow-glint`, `glow-breathe`, `sheen-drift`, `soft-lift`, `twin-shimmer`. Renderers stay still under reduced motion. |
 | `copy` | Labels and messages. Placeholders: `{field}`, `{min}`, `{max}`, `{label}`. Turning a feature on makes its copy keys required. |
 
 ## Checks
