@@ -1,0 +1,116 @@
+{
+  "$schema": "https://github.com/openmindednewby/sign-in-config/blob/main/schema/sign-in-config.schema.json",
+  "version": 1,
+  "features": {
+    "rememberMe": {
+      "enabled": true,
+      "maxHours": 720
+    },
+    "forgotPassword": {
+      "enabled": true,
+      "tokenMinutes": 30
+    },
+    "signUp": {
+      "enabled": true,
+      "href": "/register"
+    },
+    "demoAccounts": {
+      "enabled": true
+    }
+  },
+  "validation": {
+    "username": {
+      "kind": "email",
+      "required": true,
+      "maxLength": 254
+    },
+    "password": {
+      "required": true,
+      "minLength": 8,
+      "maxLength": 128,
+      "pattern": "^(?=.*[0-9]).+$",
+      "patternMessage": "{field} needs a digit"
+    }
+  },
+  "theme": {
+    "colors": {
+      "brand": "#1f5f8b",
+      "brandHover": "#174a6d",
+      "brandInk": "#ffffff",
+      "brandOnLight": "#1f5f8b",
+      "band": "#eef2f5",
+      "ink": "#1a1a1a",
+      "label": "#333333",
+      "line": "#d0d0d5",
+      "muted": "#5f6368",
+      "card": "#ffffff",
+      "pageTop": "#f5f5f7",
+      "pageBottom": "#e9ecef",
+      "shadow": "rgba(0, 0, 0, 0.12)",
+      "focusRing": "#1f5f8b",
+      "errorBackground": "#fdecea",
+      "errorBorder": "#d33333",
+      "errorText": "#a12020",
+      "rowBackground": "#f7f9fa",
+      "rowHover": "#eef2f5",
+      "success": "#1f7a3d"
+    },
+    "fontFamily": "'Source Sans 3', system-ui, sans-serif",
+    "radii": {
+      "input": 8,
+      "card": 12
+    },
+    "spacing": {
+      "xs": 8,
+      "sm": 12,
+      "md": 20,
+      "lg": 32,
+      "xl": 24
+    },
+    "typography": {
+      "title": 28,
+      "subtitle": 16,
+      "label": 13,
+      "body": 16,
+      "caption": 12
+    }
+  },
+  "motion": {
+    "enabled": true,
+    "intro": {
+      "preset": "stagger-rise",
+      "durationMs": 600
+    },
+    "micro": {
+      "preset": "sweep",
+      "durationMs": 400
+    },
+    "idle": {
+      "recipe": "breath"
+    }
+  },
+  "copy": {
+    "usernameLabel": "Username",
+    "passwordLabel": "Password",
+    "submitLabel": "Sign in",
+    "requiredMessage": "{field} is required",
+    "tooShortMessage": "{field} needs at least {min} characters",
+    "tooLongMessage": "{field} allows at most {max} characters",
+    "footer": "Need help? Ask your administrator.",
+    "emailInvalidMessage": "Enter a valid email address",
+    "rememberMeLabel": "Keep me signed in",
+    "forgotPasswordLink": "Forgot password?",
+    "forgotPasswordTitle": "Reset your password",
+    "forgotPasswordSubmit": "Send reset link",
+    "forgotPasswordSent": "If an account exists for that email, a reset link is on its way.",
+    "resetPasswordTitle": "Choose a new password",
+    "resetPasswordSubmit": "Save password",
+    "resetPasswordDone": "Your password is changed. Sign in with it now.",
+    "resetPasswordInvalid": "This reset link has expired or was already used.",
+    "signUpLink": "Create an account",
+    "demoToggle": "Demo accounts",
+    "demoHint": "Pick an account to sign in as it.",
+    "demoAriaLabel": "Demo accounts",
+    "demoRowAriaLabel": "Sign in as {label}"
+  }
+}

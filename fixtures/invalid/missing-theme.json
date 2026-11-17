@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "copy": {
+    "usernameLabel": "Username",
+    "passwordLabel": "Password",
+    "submitLabel": "Sign in",
+    "requiredMessage": "{field} is required",
+    "tooShortMessage": "{field} needs at least {min} characters",
+    "tooLongMessage": "{field} allows at most {max} characters"
+  }
+}

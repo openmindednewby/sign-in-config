@@ -1,0 +1,51 @@
+{
+  "name": "@dloizides/sign-in-config",
+  "version": "1.0.0",
+  "description": "One JSON config for a sign-in page: features (remember me, forgot password, sign up, demo accounts), field validation, theme tokens with a contrast check, logo motion presets and copy. JSON Schema 2020-12, a zero-dependency validator that names the failing field path, and shared fixtures for other runtimes.",
+  "keywords": ["sign-in", "login", "json-schema", "config", "validation", "contrast", "wcag", "theme-tokens"],
+  "author": "dloizides",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/openmindednewby/sign-in-config.git" },
+  "homepage": "https://github.com/openmindednewby/sign-in-config#readme",
+  "bugs": { "url": "https://github.com/openmindednewby/sign-in-config/issues" },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+      "import": { "types": "./dist/index.d.mts", "default": "./dist/index.mjs" },
+      "default": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+    },
+    "./schema.json": "./schema/sign-in-config.schema.json",
+    "./fixtures/*": "./fixtures/*",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "schema", "fixtures", "README.md", "CHANGELOG.md"],
+  "sideEffects": false,
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
+    "build": "rimraf dist && tsup",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "security:audit": "npm audit --audit-level=high",
+    "prepublishOnly": "npm run clean && npm run build && npm run test"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.19.32",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "ajv": "^8.17.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.0",
+    "ts-jest": "^29.1.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "valid": [
+    {
+      "file": "valid/minimal.json"
+    },
+    {
+      "file": "valid/full.json"
+    },
+    {
+      "file": "valid/remember-me-at-session-cap.json",
+      "options": {
+        "sessionMaxHours": 10
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "file": "invalid/unknown-key.json",
+      "errors": [
+        {
+          "path": "/colour",
+          "keyword": "additionalProperties"
+        }
+      ]
+    },
+    {
+      "file": "invalid/unknown-theme-token.json",
+      "errors": [
+        {
+          "path": "/theme/colors/accent",
+          "keyword": "additionalProperties"
+        }
+      ]
+    },
+    {
+      "file": "invalid/bad-colour.json",
+      "errors": [
+        {
+          "path": "/theme/colors/ink",
+          "keyword": "pattern"
+        }
+      ]
+    },
+    {
+      "file": "invalid/colour-channel-out-of-range.json",
+      "errors": [
+        {
+          "path": "/theme/colors/band",
+          "keyword": "color"
+        }
+      ]
+    },
+    {
+      "file": "invalid/low-text-contrast.json",
+      "errors": [
+        {
+          "path": "/theme/colors/muted",
+          "keyword": "contrast"
+        }
+      ]
+    },
+    {
+      "file": "invalid/low-button-contrast.json",
+      "errors": [
+        {
+          "path": "/theme/colors/brandInk",
+          "keyword": "contrast"
+        },
+        {
+          "path": "/theme/colors/brandInk",
+          "keyword": "contrast"
+        }
+      ]
+    },
+    {
+      "file": "invalid/translucent-text-contrast.json",
+      "errors": [
+        {
+          "path": "/theme/colors/label",
+          "keyword": "contrast"
+        }
+      ]
+    },
+    {
+      "file": "invalid/motion-intro-over-cap.json",
+      "errors": [
+        {
+          "path": "/motion/intro/durationMs",
+          "keyword": "maximum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/motion-micro-over-cap.json",
+      "errors": [
+        {
+          "path": "/motion/micro/durationMs",
+          "keyword": "maximum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/motion-unknown-preset.json",
+      "errors": [
+        {
+          "path": "/motion/intro/preset",
+          "keyword": "enum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/remember-me-over-session-cap.json",
+      "options": {
+        "sessionMaxHours": 10
+      },
+      "errors": [
+        {
+          "path": "/features/rememberMe/maxHours",
+          "keyword": "sessionCap"
+        }
+      ]
+    },
+    {
+      "file": "invalid/remember-me-without-cap.json",
+      "errors": [
+        {
+          "path": "/features/rememberMe/maxHours",
+          "keyword": "required"
+        }
+      ]
+    },
+    {
+      "file": "invalid/remember-me-zero-hours.json",
+      "errors": [
+        {
+          "path": "/features/rememberMe/maxHours",
+          "keyword": "exclusiveMinimum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/remember-me-over-schema-cap.json",
+      "errors": [
+        {
+          "path": "/features/rememberMe/maxHours",
+          "keyword": "maximum"
+        }
+      ]
+    },
+    {
+      "file": "invalid/feature-without-copy.json",
+      "errors": [
+        {
+          "path": "/copy/forgotPasswordLink",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/forgotPasswordSent",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/forgotPasswordSubmit",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/forgotPasswordTitle",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/resetPasswordDone",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/resetPasswordInvalid",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/resetPasswordSubmit",
+          "keyword": "required"
+        },
+        {
+          "path": "/copy/resetPasswordTitle",
+          "keyword": "required"
+        }
+      ]
+    },
+    {
+      "file": "invalid/email-without-message.json",
+      "errors": [
+        {
+          "path": "/copy/emailInvalidMessage",
+          "keyword": "required"
+        }
+      ]
+    },
+    {
+      "file": "invalid/bad-regex.json",
+      "errors": [
+        {
+          "path": "/validation/password/pattern",
+          "keyword": "regex"
+        }
+      ]
+    },
+    {
+      "file": "invalid/pattern-without-message.json",
+      "errors": [
+        {
+          "path": "/validation/password/patternMessage",
+          "keyword": "dependentRequired"
+        }
+      ]
+    },
+    {
+      "file": "invalid/min-over-max.json",
+      "errors": [
+        {
+          "path": "/validation/password/minLength",
+          "keyword": "range"
+        }
+      ]
+    },
+    {
+      "file": "invalid/wrong-type.json",
+      "errors": [
+        {
+          "path": "/features/demoAccounts/enabled",
+          "keyword": "type"
+        }
+      ]
+    },
+    {
+      "file": "invalid/fractional-integer.json",
+      "errors": [
+        {
+          "path": "/features/forgotPassword/tokenMinutes",
+          "keyword": "type"
+        }
+      ]
+    },
+    {
+      "file": "invalid/empty-label.json",
+      "errors": [
+        {
+          "path": "/copy/submitLabel",
+          "keyword": "minLength"
+        }
+      ]
+    },
+    {
+      "file": "invalid/wrong-version.json",
+      "errors": [
+        {
+          "path": "/version",
+          "keyword": "const"
+        }
+      ]
+    },
+    {
+      "file": "invalid/missing-theme.json",
+      "errors": [
+        {
+          "path": "/theme",
+          "keyword": "required"
+        }
+      ]
+    },
+    {
+      "file": "invalid/not-an-object.json",
+      "errors": [
+        {
+          "path": "",
+          "keyword": "type"
+        }
+      ]
+    },
+    {
+      "file": "invalid/unsafe-font.json",
+      "errors": [
+        {
+          "path": "/theme/fontFamily",
+          "keyword": "pattern"
+        }
+      ]
+    }
+  ]
+}
